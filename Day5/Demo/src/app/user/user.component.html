@@ -1,0 +1,21 @@
+<div class="container">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Development</th>
+                <th scope="col">ID</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let u of values">
+                <td>{{u.name}}</td>
+                <td>{{u.deve}}</td>
+                <td>{{u.id}}</td>
+
+            </tr>
+        </tbody>
+
+    </table>
+
+</div>

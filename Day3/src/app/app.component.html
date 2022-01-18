@@ -1,0 +1,39 @@
+<app-parent></app-parent>
+<!-- <button>click here </button> -->
+<p *ngIf="flag">Shaikh</p>
+<button (click)="toggle()">click here</button>
+<table>
+    <tr *ngFor="let u of users">
+        <td>{{u.name}}</td>
+        <td>{{u.age}}</td>
+        <td>{{u.Sname}}</td>
+        <td>{{u.hero}}</td>
+    </tr>
+</table>
+
+<ul *ngFor="let user of users">
+    <li>{{user.name}}</li>
+    <li>{{user.age}}</li>
+    <li>{{user.Sname}}</li>
+    <li>{{user.hero}}</li>
+</ul>
+
+<div [ngSwitch]="selectedCountry">
+
+    <div *ngSwitchCase="'ind'">
+        <h1>india has been selected</h1>
+    </div>
+
+    <div *ngSwitchCase="'uk'">
+        <h1>uk has been selected</h1>
+    </div>
+    <div *ngSwitchCase="'aus'">
+        <h1>aus has been selected</h1>
+    </div>
+    <div *ngSwitchCase="'srilanka'">
+        <h1>srilanka has been selected</h1>
+    </div>
+    <div *ngSwitchDefault>
+        <h1>no selected</h1>
+    </div>
+</div>

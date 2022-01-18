@@ -1,0 +1,18 @@
+<p>child works!</p>
+<div>
+    <ng-content select=".header"></ng-content>
+    <ng-content select=".link"> </ng-content>
+    <br>
+    <table border="2px solid">
+        <tr *ngFor="let u of products">
+            <td>
+                {{u.name}}
+            </td>
+            <td>
+                {{u.price}}
+
+            </td>
+        </tr>
+    </table>
+    <!-- <ng-content select=".link"> </ng-content> -->
+</div>

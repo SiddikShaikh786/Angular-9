@@ -1,0 +1,160 @@
+<div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light bg-success">
+        <a class="navbar-brand" href="#">Shaikh</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">About us</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+</div>
+<!-- register form -->
+<div class="container">
+    <div class="col"></div>
+    <span style="margin-left:250px;font-size:50px;color:rgb(196, 21, 172)">
+        Register Form
+    </span>
+    <div class="col-md-6">
+
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+            <fieldset>
+                <legend style="color:rgb(22, 10, 177);font-weight: bolder; text-align: center;">Register here</legend>
+
+                <!-- Firstname -->
+                <div class="form-group">
+                    <label for="exampleInputName" style="font-weight: bold;">First name</label>
+                    <input type="text" class="form-control" id="exampleInputUserName" aria-describedby="emailHelp"
+                        formControlName="fname" autofocus>
+                    <span style=" color:red; font-weight: bolder;" *ngIf="fname.invalid && fname.touched"> **enter valid
+                        First Name</span>
+                </div>
+
+                <!-- lastname -->
+                <div class="form-group">
+                    <label for="exampleInputName" style="font-weight: bold;">Last name</label>
+                    <input type="text" class="form-control" id="exampleInputLastname" aria-describedby="emailHelp"
+                        formControlName="lname">
+                    <span style=" color:red; font-weight: bolder;" *ngIf="lname.invalid && lname.touched"> **enter valid
+                        Last Name</span>
+                </div>
+
+
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="exampleInputEmail1" style="font-weight: bold;">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        formControlName="uname">
+                    <span style=" color:red; font-weight: bolder;" *ngIf="uname.invalid && uname.touched"> **enter valid
+                        email Name</span>
+                </div>
+
+                <!-- Password -->
+                <div class="form-group">
+                    <label for="exampleInputPassword1" style="font-weight: bold;">Password</label>
+                    <input type="password" maxlength="10" class="form-control" id="exampleInputPassword1"
+                        formControlName="password">
+                    <span style=" color:red;font-weight: bolder;" *ngIf="password.invalid && password.touched"> **enter
+                        valid password <br>
+
+                        <span style="color:darkred; font-size: 25px;">Sholud be Contain</span> <br>
+
+                        8 characters length <br>
+                        2 letters in Upper Case <br>
+                        1 Special Character (!@#$&*) <br>
+                        2 numerals (0-9) <br>
+                        3 letters in Lower Case
+
+                    </span>
+
+                </div>
+                <!-- Confirm Password -->
+
+                <div class="form-group">
+                    <label for="exampleInputPassword1" style="font-weight: bold;"> Confirm Password</label>
+                    <input type="password" maxlength="10" class="form-control" id="exampleInputPassword1"
+                        formControlName="retypepass">
+                    <span style=" color:red;font-weight: bolder;" *ngIf="retypepass.invalid && retypepass.touched"> **
+                        Re
+                        enter
+                        valid password <br>
+
+                    </span>
+                </div>
+
+
+                <!-- Gender -->
+                <div class="form-group">
+                    <h6 class="mb-0 me-4" style="font-weight: bold;">Gender: </h6>
+
+                    <div class="form-check form-check-inline mb-0 me-4">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="femaleGender"
+                            value="option1" />
+                        <label class="form-check-label" for="femaleGender">Female</label>
+                        <span style=" color:red;font-weight: bolder;"
+                            *ngIf="inlineRadioOptions.invalid && inlineRadioOptions.touched"> **Required <br>
+                        </span>
+                    </div>
+
+                    <div class="form-check form-check-inline mb-0 me-4">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="maleGender"
+                            value="option2" />
+                        <label class="form-check-label" for="maleGender">Male</label>
+                        <span style=" color:red;font-weight: bolder;"
+                            *ngIf="inlineRadioOptions.invalid && inlineRadioOptions.touched"> **Required <br>
+
+                        </span>
+                    </div>
+
+                    <div class="form-check form-check-inline mb-0">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="otherGender"
+                            value="option3" />
+                        <label class="form-check-label" for="otherGender">Other</label>
+                        <span style=" color:red;font-weight: bolder;"
+                            *ngIf="inlineRadioOptions.invalid && inlineRadioOptions.touched">**Required <br>
+                        </span>
+
+                    </div>
+                </div>
+
+                <br>
+
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button type="submit" [disabled]="!loginForm.valid" class="btn btn-primary">Submit</button>
+            </fieldset>
+        </form>
+    </div>
+
+</div>

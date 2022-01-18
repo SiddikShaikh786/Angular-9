@@ -1,0 +1,20 @@
+Routing: predeifned module or class which will have all the method and class which is responsible for routing--
+
+ routing is done in app.routing.module.ts
+ we must define one const variable routes of  types Routes and variable  will take  
+ array  as value in  the form of key value pairs and key is path of the component 
+ and values denotes are actual path of the component names  respevtively
+
+ Inside ngModule there is method called  forroutes(routes)
+  this argument routes will take our component ngModule array as  value and this is main reasin fir routing
+
+If we want to rendering particular component we should provide :-<router-outlet> </router-outlet>
+
+if we dont type any values the perticular component (Ex:user) in routing then by using 
+we can navigate to a perticualr component
+
+If we  want to click the nav menus  just type routerLink in html element 
+for example 
+ <li class="nav-item">
+                <a class="nav-link" routerLink="contact-us">contact us</a>
+            </li>
