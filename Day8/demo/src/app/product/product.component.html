@@ -1,0 +1,27 @@
+<p>product works!</p>
+<div class="container">
+    <table class="table table-bordered">
+        <thead class="bg-primary ">
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">id</th>
+                <th>city</th>
+                <th scope="col">salary</th>
+                <th>DOB</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody class="hovered">
+            <tr class=" bg-danger" *ngFor="let p of product">
+                <td>{{p.name |uppercase}}</td>
+                <td>{{p.id}}</td>
+                <td>{{p.city|titlecase}}</td>
+                <td> {{p.salary|currency:'INR'}}</td>
+                <td>{{p.dob|date:'dd/mm/yyyy'}}</td>
+                <td>{{p.dob|age}}</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+</div>
