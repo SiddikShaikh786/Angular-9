@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="dropdown-menu">
+        <form #loginForm="ngForm" (ngSubmit)="onLogin(loginForm.value)" class="px-4 py-3">
+            <div class="form-group">
+                <label for="exampleDropdownFormEmail1">Email address</label>
+                <input #email="ngModel" required pattern="/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                " name="email" aria-placeholder="email" type="email" class="form-control"
+                    id="exampleDropdownFormEmail1" placeholder="email@example.com" ngModel>
+                <span style="color:red;font-weight: bold;" *ngIf="email.touched && email.invalid">Enter the valid email
+                    Address</span>
+                <!-- email@example.com -->
+
+            </div>
+            <div class="form-group">
+                <label for="exampleDropdownFormPassword1">Password</label>
+                <input #password="ngModel" type="password" name="password"
+                    pattern=" /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;" required class="form-control"
+                    id="exampleDropdownFormPassword1" placeholder="Password" ngModel>
+                <span style="color:red;font-weight: bold;" *ngIf="password.touched && password.invalid">Enter the valid
+                    password
+                    Address</span>
+                <span style="color:red;font-weight:bolder;">
+                    <ul>
+                        <li> password between 6 to 20 characters </li>
+                        <li> at least one numeric digit,</li>
+                        <li> one uppercase and</li>
+                        <li> one lowercase letter</li>
+                    </ul>
+
+                </span>
+
+
+            </div>
+            <div class="form-group">
+                <div class="form-check">
+                    <input #checked="ngModel" required type="checkbox" required class="form-check-input"
+                        id="dropdownCheck" ngModel>
+                    <label class="form-check-label" for="dropdownCheck" ngModel>
+                        Remember me
+                    </label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary  btn-outline-success btn-danger">Sign in</button>
+        </form>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">New around here? Sign up</a>
+        <a class="dropdown-item" href="#">Forgot password?</a>
+    </div>
+</div>

@@ -1,0 +1,38 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "category_id": 1,
+            "name": "Acer Laptop",
+            "company": "ACER",
+            "product_img": "img_path",
+            "description": "this is acer lap with 8GB RAM",
+            "vendors_name": "Big Bazar",
+            "rating": 4.5,
+            "reviews": 150,
+            "warranty": 1
+        },
+        {
+            "id": 2,
+            "category_id": 2,
+            "name": "Head Phone",
+            "company": "Boat",
+            "product_img": "img_path",
+            "description": "this is BOAT wireless head phone ",
+            "vendors_name": "Big Bazar",
+            "rating": 4.9,
+            "reviews": 170,
+            "warranty": 1.5
+        }
+    ],
+    "comments": [
+        {
+            "id": 1,
+            "body": "some comment",
+            "postId": 1
+        }
+    ],
+    "profile": {
+        "name": "typicode"
+    }
+}

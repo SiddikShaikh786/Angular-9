@@ -1,0 +1,9 @@
+form
+{
+    width:350px !important;
+    margin-top: 40px;
+    margin-left:300px;
+    padding: 20px;
+    height: 600px;
+    box-shadow: 0.5px 0 5px rgb(223, 59, 18);
+}

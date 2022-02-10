@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent, canActivate: [AuthGuardGuard] },//users path
   { path: 'reg', component: RegComponent, canDeactivate: [UnsavedGuard] },
   { path: '**', component: RegComponent },
-  // {path:'about',component:aboutComponent},
+  // {path:'about',component:aboutComponent},s
   // {path:'home',component:homeComponent},
   // {path:'contactus',component:contactusComponent},
 

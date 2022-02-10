@@ -1,0 +1,46 @@
+<!-- <div>
+    value from parent is <strong>{{childValue}}</strong>
+</div>
+<button (click)="childtoParent()">click me</button>
+<table border="2px solid" *ngIf="child">
+    <thead>
+        <tr>
+            <th>name</th>
+            <th>id</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let child of person">
+            <td>{{child.name}}</td>
+            <td>{{child.id}}</td>
+        </tr>
+    </tbody>
+</table> -->
+
+<div class="container">
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" formControlName="email" name="email" class="form-control" id="exampleInputEmail1"
+                aria-describedby="emailHelp">
+            <span style="color:red;font-style: bolder;" *ngIf="email.invalid && email.touched">enter correct
+                email</span>
+
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" formControlName="password" class="form-control" id="exampleInputPassword1">
+            <span style="color:red;font-style: bolder;" *ngIf="password.invalid && password.touched">enter correct
+                password</span>
+
+        </div>
+        <div class="mb-3 form-check">
+            <input type="checkbox" formControlName="checked" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            <span style="color:red;font-style: bolder;" *ngIf="checked.invalid && checked.touched"> click me
+            </span>
+
+        </div>
+        <button type="submit" [disabled]="loginForm.invalid" class="btn btn-primary">Submit</button>
+    </form>
+</div>

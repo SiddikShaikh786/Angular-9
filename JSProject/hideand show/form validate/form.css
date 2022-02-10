@@ -1,0 +1,58 @@
+#maindiv {
+    width: 500px;
+    background-color: rgba(180, 28, 53, 0.3);
+    border-radius: 10px 10px;
+    padding: 30px 10px;
+    box-shadow: 2px 2px 10px rgba(247, 200, 4, 0.5);
+    margin:10px 10px 20px 450px;
+  }
+  
+  body {
+    background-size: cover;
+    background-color: darkgray;
+  }
+  
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  .far fa-eye-slash
+  {
+    position: relative;
+    left:15px;
+  }
+
+
+
+
+
+  /* Firefox */
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+  /* social media icon */
+  .social-media
+  {
+     margin-top:0px;
+  }
+  .media
+  {
+     color:rgb(201, 10, 42);
+      margin:40px; 
+        }
+  .icon-social-facebook
+  {
+      margin:40px;
+
+  }
+  .icon-social-google
+  {
+      margin:40px;
+  }
+  .icon-social-twitter
+  {
+      margin:40px;
+  }

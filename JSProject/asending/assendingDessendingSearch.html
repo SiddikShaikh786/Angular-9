@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assendind Desending Search</title>
+    <style>
+        body {
+            background-color: blueviolet;
+        }
+
+        .ascending,
+        .descending {
+            border-radius: 10px;
+            height: 50px;
+            width: auto;
+            background-color: burlywood;
+
+        }
+    </style>
+</head>
+
+<body>
+    <marquee behavior="alternate" direction="" scrollamount="10" width="500px">
+        <h1 style=" font-size: 80px;color:hotpink;margin:0px;"> SEARCH:</h1>
+    </marquee>
+
+    <div style=" text-align: center;float:right">
+
+        <input style="padding:15px;border-radius: 10px;" type="text" id="myInput" onkeyup="myFunction()"
+            placeholder="search..." style="margin-left: 600px;">
+        <button onclick="asscending()" class="ascending">asscending</button>
+        <button onclick="descending()" class="descending">descending</button>
+    </div>
+    <h2><strong>
+            <div id="users"></div>
+        </strong></h2>
+    <h2><strong>
+            <div id="id"></div>
+        </strong></h2>
+
+
+
+
+    <script src="./assendingDessendingSearch.js"></script>
+</body>
+
+</html>

@@ -1,4 +1,3 @@
-<!-- <p>parent works!</p>
-<app-child (message)="passData($event)">
-</app-child>
-<h3>{{result}}</h3> -->
+<button (click)="toggle()"> toggle</button>
+<input type="text" [(ngModel)]="message">
+<app-child *ngIf="flag" [childMessage]="message"></app-child>

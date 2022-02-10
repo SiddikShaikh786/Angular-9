@@ -1,0 +1,7 @@
+const fs = require('fs')
+// fs.mkdirSync('shaikh')
+fs.writeFileSync('shaikh/s2.txt', 'this shaikh folder')
+fs.readFileSync('shaikh/s2.txt')
+fs.appendFileSync('shaikh/s2.txt', '  appended')
+const data = fs.readFileSync('shaikh/s2.txt')
+console.log('result', data.toString())

@@ -1,0 +1,67 @@
+<div class="container">
+    <form class="px-4 py-3" #loginForm="ngForm" (ngSubmit)="submit(loginForm)">
+        <div class="form-group">
+            <label for="exampleDropdownFormEmail1">Email address</label>
+            <input type="email" required #email="ngModel" name="email" class="form-control"
+                id="exampleDropdownFormEmail1" placeholder="email@example.com" ngModel>
+            <span style="color:red;font-style: bolder;" *ngIf="email.invalid && email.touched">enter correct
+                email</span>
+        </div>
+        <div class="form-group">
+            <label for="exampleDropdownFormPassword1">Password</label>
+            <input type="password" required name="password" #password="ngModel" class="form-control"
+                id="exampleDropdownFormPassword1" placeholder="Password" ngModel>
+            <span style="color:red;font-style: bolder;" *ngIf="password.invalid && password.touched">enter correct
+                password</span>
+
+        </div>
+        <div class="form-group">
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                <label class="form-check-label" for="dropdownCheck">
+                    Remember me
+                </label>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Sign in</button>
+    </form>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="#">New around here? Sign up</a>
+    <a class="dropdown-item" href="#">Forgot password?</a>
+</div>
+
+<div>
+    value from parent {{child}}
+</div>
+
+
+<!-- <p [class]="name" [class.classColor1]="value"> shaikh
+</p>
+<p [style.color]="c1">Shaikh</p>
+<button (mouseover)="toggle()">Mouse Over</button>
+<div>
+    <label for=""> enter</label> &nbsp;
+    <input type="text" name="" id="" [(ngModel)]="name1">
+    value of ngModel is <strong> {{name1}}</strong>
+</div>
+<button (click)="toggle1()">click me</button>
+<table border="2px" cellspacing="5" *ngIf="isTrue">
+    <thead>
+        <th>Name</th>
+        <th>Id</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of person">
+            <td>{{p.name}}</td>
+            <td>{{p.id}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<button (click)="messageFromParent()"> click me</button>
+<input type="text" name="" id="" [(ngModel)]="message">
+<app-child *ngIf="isParent" [childValue]="message" (messagefromChild)="passData($event)"></app-child>
+
+<div>
+    message from child <strong>{{receiveMessage}}</strong>
+</div> -->
